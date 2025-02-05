@@ -89,7 +89,7 @@ const SearchAndFilter: React.FC<SearchAndFilterProps> = ({ food }) => {
           onChange={(e) => setSearchQuery(e.target.value)}
         />
         <button className="w-[76px] h-auto flex items-center justify-center bg-[#FF9F0D]">
-          <img src="/Group (2).svg" alt="search icon" width={24} height={24} />
+          <Image src="/Group (2).svg" alt="search icon" width={24} height={24} />
         </button>
       </div>
 
