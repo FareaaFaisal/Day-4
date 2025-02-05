@@ -153,7 +153,7 @@ const ProductDetailClient: React.FC<ProductDetailClientProps> = ({ product, slug
       
         </div>
       </div>
-      <TabComponent slug={slug}/>
+      <TabComponent/>
     </div>
   </div>
   );
