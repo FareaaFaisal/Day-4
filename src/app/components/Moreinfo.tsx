@@ -1,14 +1,8 @@
-"use client"
 import { useState } from "react";
 import CommentBox from "./Comment";
-import Link from "next/link";
 
-// Define the prop type for `slug`
-type TabComponentProps = {
-  slug: string; // Expecting `slug` to be a string
-};
-
-const TabComponent = ({ slug }: TabComponentProps) => {
+// Remove slug from the prop type if not used
+const TabComponent = () => {
   const [activeTab, setActiveTab] = useState("description");
 
   return (
@@ -22,14 +16,12 @@ const TabComponent = ({ slug }: TabComponentProps) => {
           Description
         </p>
 
-        {/* <Link href={`/review`}> */}
-          <p
-            onClick={() => setActiveTab("reviews")}
-            className={`py-2 px-8 cursor-pointer ${activeTab === "reviews" ? "bg-[#FF9F0D] text-white" : "text-gray-600 hover:bg-[#FF9F0D] hover:text-white"}`}
-          >
-            Reviews
-          </p>
-        {/* </Link> */}
+        <p
+          onClick={() => setActiveTab("reviews")}
+          className={`py-2 px-8 cursor-pointer ${activeTab === "reviews" ? "bg-[#FF9F0D] text-white" : "text-gray-600 hover:bg-[#FF9F0D] hover:text-white"}`}
+        >
+          Reviews
+        </p>
       </div>
 
       {/* Conditionally render content based on active tab */}
