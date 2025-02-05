@@ -1,7 +1,7 @@
 import { useState } from "react";
 import CommentBox from "./Comment";
 
-// Remove slug from the prop type if not used
+// TabComponent doesn't need the slug prop anymore
 const TabComponent = () => {
   const [activeTab, setActiveTab] = useState("description");
 
@@ -43,13 +43,13 @@ const TabComponent = () => {
         {activeTab === "reviews" && (
           <div className="mb-20">
             <p className="mt-10 ml-[160px] mr-20 text-justify">
-              <CommentBox/>
+              <CommentBox />
             </p>
           </div>
         )}
       </div>
     </div>
-  )
+  );
 };
 
 export default TabComponent;
