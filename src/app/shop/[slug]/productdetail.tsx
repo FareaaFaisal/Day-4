@@ -1,6 +1,5 @@
 "use client"; // This marks the component as a client-side component
 
-import { useCart } from "@/app/context/CartContext"; // Import the useCart hook
 import AddToCart from "@/app/components/AddToCart"; // Import the AddToCart component
 import Image from "next/image";
 import Link from "next/link";
