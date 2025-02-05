@@ -9,14 +9,9 @@ const query = `*[_type == "food" && slug.current == $slug][0]{
   "image_url": image.asset->url
 }`;
 
-interface ProductDetailProps {
-  params: {
-    slug: string;
-  };
-}
-
-export default async function ProductDetail({ params }: ProductDetailProps) {
-  const { slug } = params;
+export default async function ProductDetail({ params }: { params: { slug: string } }) {
+  // Await params before destructuring
+  const { slug } = await params;
 
   // Fetch product data from Sanity
   const product: FoodItem | null = await client.fetch(query, { slug });
