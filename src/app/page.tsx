@@ -512,7 +512,9 @@ export default function Home() {
     <div className="flex flex-col sm:flex-row md:flex-col lg:flex-row lg:gap-4 gap-20">
       {/* Card 1 */}
       <div className="border-2 border-white bg-transparent w-full sm:w-[300px] md:w-[360px] lg:w-[340px] lg:h-[510px] md:h-[569px]">
+        <Link href={"/pages"}>
         <Image src="/Image Placeholder.svg" width={0} height={0} className="w-full" alt="Blog 1" />
+        </Link>
         <div className="p-4">
           <p className="text-[#FF9F0D] mt-4 text-sm sm:text-base">10 February 2022</p>
           <p className="text-white text-lg sm:text-xl lg:text-2xl mt-2 font-bold">
@@ -523,7 +525,9 @@ export default function Home() {
       </div>
       {/* Card 2 */}
       <div className="border-2 border-white bg-transparent w-full sm:w-[300px] md:w-[360px] lg:w-[340px] lg:h-[510px] md:h-[569px]">
-        <Image src="/Image Placeholder (1).svg" width={0} height={0} className="w-full" alt="Blog 2" />
+        <Link href={"/pages"}>
+        <Image src="/Image Placeholder (1).svg" width={0} height={0} className="w-full" alt="Blog 1" />
+        </Link>
         <div className="p-4">
           <p className="text-[#FF9F0D] mt-4 text-sm sm:text-base">10 February 2022</p>
           <p className="text-white text-lg sm:text-xl lg:text-2xl mt-2 font-bold">
@@ -534,9 +538,9 @@ export default function Home() {
       </div>
       {/* Card 3 */}
       <div className="border-2 border-white bg-transparent w-full sm:w-[300px] md:w-[360px] lg:w-[340px] lg:h-[510px] md:h-[569px]">
-    
-     
-        <Image src="/Image Placeholder (2).svg" width={0} height={0} className="w-full" alt="Blog 3" />
+      <Link href={"/pages"}>
+        <Image src="/Image Placeholder (2).svg" width={0} height={0} className="w-full" alt="Blog 1" />
+      </Link>
         <div className="p-4">
           <p className="text-[#FF9F0D] mt-4 text-sm sm:text-base">10 February 2022</p>
           <p className="text-white text-lg sm:text-xl lg:text-2xl mt-2 font-bold">
