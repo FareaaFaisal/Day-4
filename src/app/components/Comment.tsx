@@ -25,8 +25,8 @@ const CommentBox = () => {
   };
 
   return (
-    <div>
-      <h1 className="text-4xl font-bold mt-4 text-gray-500">Post a Comment</h1>
+    <div className='mt-20'>
+      <h1 className="lg:text-4xl text-2xl font-bold mt-4 text-gray-500">Post a Comment</h1>
 
       {/* Name input field */}
       <input
@@ -34,7 +34,7 @@ const CommentBox = () => {
         value={name}
         onChange={(e) => setName(e.target.value)}
         placeholder="Your name"
-        className="border border-[#FF9F0D] mt-3 p-2 w-[79%] rounded-lg"
+        className="border border-[#FF9F0D] mt-3 p-2 lg:w-[79%] w-[95%] rounded-lg"
       />
       <br />
       
@@ -42,9 +42,7 @@ const CommentBox = () => {
         value={comment}
         onChange={(e) => setComment(e.target.value)}
         placeholder="Write your comment"
-        rows={5}
-        cols={100}
-        className="border border-[#FF9F0D] mt-3 p-2 rounded-lg"
+        className="border border-[#FF9F0D] mt-3 p-2 lg:w-[79%] w-[95%] h-[100px] lg:h-[200px] rounded-lg"
       />
       <br />
       <button
@@ -66,7 +64,7 @@ const CommentBox = () => {
             {comments.map((data, index) => (
               <li
                 key={index}
-                className="bg-gradient-to-r w-[79%] from-[#FF9F0D] to-[#FFDA83] p-4 rounded-lg shadow-lg transform transition-all hover:scale-105 hover:shadow-xl cursor-pointer"
+                className="bg-gradient-to-r lg:w-[79%] w-[95%] from-[#FF9F0D] to-[#FFDA83] p-4 rounded-lg shadow-lg transform transition-all hover:scale-105 hover:shadow-xl cursor-pointer"
               >
                 <p className="font-medium text-gray-800">{data}</p>
               </li>
