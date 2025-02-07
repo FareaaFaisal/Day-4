@@ -5,25 +5,32 @@ export default function Signup(){
     return(
         <div className="w-full overflow-hidden">
         {/* Nav bar*/}
-        <div className="relative font-[sans-serif] pt-20 before:absolute before:w-full before:h-full before:inset-0 before:bg-black before:opacity-50 before:z-10">
-          <Image
-            src="/unsplash_4ycv3Ky1ZZU.png"
-            alt="Banner Image"
-            width={500}
-            height={500}
-            className="absolute inset-0 w-full h-full object-cover"
-          />
-          <div className="min-h-[350px] relative z-50 h-full max-w-4xl mx-auto flex flex-col justify-center items-center text-center p-6">
-            <h2 className="text-white md:text-5xl text-3xl font-bold mb-8">
-              Sign up Page
-            </h2>
-            <div className="flex items-center space-x-2 text-white">
-              <Link href="/" className="text-white">Home</Link>
-              <span className="text-white"> &gt; </span>
-              <Link href="/menu" className="text-orange-500">sign up</Link>
-            </div>
-          </div>
-        </div>
+         <div className="relative font-[sans-serif] pt-20 before:absolute lg:h-full h-[300px] before:w-full before:h-full before:inset-0 bg-black before:z-[-10] lg:mb-20 mb-10">
+  {/* Banner Image */}
+  <Image
+    src="/unsplash_4ycv3Ky1ZZU.png"
+    alt="Banner Image"
+    width={500}
+    height={500}
+    className="absolute inset-0 w-full lg:h-full h-[300px] object-cover"
+  />
+
+  {/* Text Content */}
+  <div className="min-h-[350px] relative z-40 h-full max-w-4xl mx-auto flex flex-col justify-center items-center text-center p-6 lg:mt-0 mt-0">
+    <h2 className="text-white md:text-5xl text-2xl font-bold mb-8 text-center 
+      lg:absolute lg:top-1/2 lg:left-1/2 lg:-translate-x-1/2 lg:-translate-y-1/2 
+      absolute top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2 
+      z-10 lg:z-50">
+      Sign Up
+    </h2>
+
+    <div className="flex items-center space-x-2 lg:mt-36 mt-0 text-white">
+      <Link href="/" className="text-white">Home</Link>
+      <span className="text-white"> &gt; </span>
+      <Link href="/about" className="text-orange-500">Sign Up</Link>
+    </div>
+  </div>
+</div>
         <div className="min-h-screen bg-white">
     
         {/* Signup Form */}
