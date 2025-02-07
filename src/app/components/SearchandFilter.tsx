@@ -57,7 +57,7 @@ const SearchAndFilter: React.FC<SearchAndFilterProps> = ({ food }) => {
       <select
         value={sortOption}
         onChange={(e) => setSortOption(e.target.value)}
-        className="w-[30%] pl-3 pr-3 py-2 border rounded focus:ring focus:ring-yellow-300 text-gray-600"
+        className="lg:w-[30%] w-[60%] pl-3 pr-3 py-2 border rounded focus:ring focus:ring-yellow-300 text-gray-600"
       >
         <option value="newest">Newest</option>
         <option value="price-low-to-high">Price: Low to High</option>
@@ -69,7 +69,7 @@ const SearchAndFilter: React.FC<SearchAndFilterProps> = ({ food }) => {
       <select
         value={selectedCategory}
         onChange={(e) => setSelectedCategory(e.target.value)}
-        className="w-[30%] pl-3 pr-3 py-2 border rounded focus:ring focus:ring-yellow-300 text-gray-600"
+        className="lg:w-[30%] w-[60%] lg:pl-3 mr-[-20px] lg:mr-0 lg:pr-3 py-2 border rounded focus:ring focus:ring-yellow-300 text-gray-600"
       >
         <option value="default">All</option>
         <option value="main course">Main Course</option>
@@ -84,7 +84,7 @@ const SearchAndFilter: React.FC<SearchAndFilterProps> = ({ food }) => {
         <input
           type="text"
           placeholder="Search Your Keyword Here"
-          className="w-[60%] px-3 py-3 ml-48 bg-zinc-100 border border-gray-300"
+          className="lg:w-[60%] w-[70%] px-3 py-3 lg:ml-48 ml-2 bg-zinc-100 border border-gray-300"
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
         />
