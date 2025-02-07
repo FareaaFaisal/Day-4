@@ -3,185 +3,107 @@ import Image from 'next/image';
 import Link from 'next/link';
 import CommentBox from '../components/Comment';
 
-export default function DeatilsPage() {
+export default function DetailsPage() {
     return(
         <>
-        <div className="min-w-full overflow-hidden">
-    {/* Header section */}
-    <div className="relative font-[sans-serif] pt-20 before:absolute before:w-full before:h-full before:inset-0 before:bg-black before:opacity-50 before:z-10">
-      <Image
-        src="/unsplash_4ycv3Ky1ZZU.png"
-        alt="Banner Image"
-        width={500}
-        height={500}
-        className="absolute inset-0 w-full h-full object-cover"
-      />
-      <div className="min-h-[350px] relative z-50 h-full  max-w-4xl mx-auto flex flex-col justify-center items-center text-center p-6">
-        <h2 className="text-white md:text-5xl text-3xl font-bold mb-8">
-          Blog Details
-        </h2>
-        <div className="flex items-center space-x-2 text-white">
-          <Link href="/" className="text-white">Home</Link>
-          <span className="text-white"> &gt; </span>
-          <Link href="/menu" className="text-orange-500">Blog Details</Link>
-        </div>
-      </div>
+        <div className="w-full overflow-hidden">
+        <div className="relative font-[sans-serif] pt-20 before:absolute lg:h-full h-[300px] before:w-full before:h-full before:inset-0 bg-black before:z-[-10] lg:mb-20 mb-10">
+  {/* Banner Image */}
+  <Image
+    src="/unsplash_4ycv3Ky1ZZU.png"
+    alt="Banner Image"
+    width={500}
+    height={500}
+    className="absolute inset-0 w-full lg:h-full h-[300px] object-cover"
+  />
+
+  {/* Text Content */}
+  <div className="min-h-[350px] relative z-40 h-full max-w-4xl mx-auto flex flex-col justify-center items-center text-center p-6 lg:mt-0 mt-0">
+    <h2 className="text-white md:text-5xl text-2xl font-bold mb-8 text-center 
+      lg:absolute lg:top-1/2 lg:left-1/2 lg:-translate-x-1/2 lg:-translate-y-1/2 
+      absolute top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2 
+      z-10 lg:z-50">
+      Blog Details Page
+    </h2>
+
+    <div className="flex items-center space-x-2 lg:mt-36 mt-0 text-white">
+      <Link href="/" className="text-white">Home</Link>
+      <span className="text-white"> &gt; </span>
+      <Link href="/about" className="text-orange-500">Blog Details</Link>
     </div>
+  </div>
 </div>
-
-<div className='w-full h-[3800px] top-0 bg-white flex  gap-6'>
-    <div className='w-[872px] h-[980px] pt-[130px] mx-[10px]  bg-white'>
-
-        {/* First Image */}
-        <Image 
-        src='/details1.png'
-        alt=''
-        width={871}
-        height={520}
-        className='mt-10 mr-5 ml-5'
-        />
-        <div className='flex mt-3'>
-            <Image 
-            src='/Calendar.svg'
-            alt=''
-            width={23.97}
-            height={24}
-            className='cursor-pointer mr-5 ml-5'
-            />
-            <p> Feb 14, 2022 / </p>
-            <Image 
-            src='/messages.svg'
-            alt=''
-            width={23.97}
-            height={24}
-            className='cursor-pointer mr-5 ml-5'
-            />
-            <p> 3 / </p>
-               <Image 
-            src='/admin.svg'
-            alt=''
-            width={23.97}
-            height={24}
-            className='cursor-pointer'
-            />
-            <p> Admin </p>
-        </div>
-        <div className='pl-[20px]'>
-        <h1 className='font-bold text-4xl w-[504px] h-8 bg-white py-[46px] text-[#333333] mb-10'>10 Reasons To Do A Digital Detox challenge</h1>
-        <p className='w-[647.26px] h-[96px] py-[40px] bg-white'>At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat</p>
-        <p className='w-[647.26px] h-[96px] py-[40px] bg-white mt-10'>At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat</p>
-        
-     
         </div>
 
-        <div className='py-[40px] bg-[#FF9F0D] mt-20 flex flex-row h-[176px] w-[853px] p-6 ml-[20px]'>
-        <Image 
-            src='/Quotes.png'
-            alt=''
-            width={48}
-            height={48}
-            className='ml-20 mt-[-15px]'
-            />
-        <p className=' w-[647.26px] h-[96px] font-bold text-2xl text-white ml-[20px]'>Lorem eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet et ut aliquyam </p>
-        
-        </div>
-       
-
-        <p className='w-[853px] h-[120px] left-0 text-[#4F4F4F] mt-[36px] ml-[20px]'>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>
-            {/* paragraph + Image div */}
-
-            <div className='w-[853px] flex h-[420px] mt-[60px]'>
-                {/* paragraph div */}
-                <div className='w-[420px] h-[236px] text-[#4F4F4F] ml-[20px] gap-3'>
-                   <p className='w-[420px] gap-2 h-[236px]'>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>
-                   <p className='w-[420px] h-[168px] mt-5'>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing </p>
-                </div>
-
-                {/* Image div */}
-                <div className='ml-4 w-[424px] h-[366px]'>
-                    <Image 
-                    src='/ramen.png'
+        <div className='w-full bg-white flex flex-col lg:flex-row gap-6 p-4 lg:p-10'>
+            {/* Main Content */}
+            <div className='w-full lg:w-2/3 bg-white'>
+                <Image 
+                    src='/details1.png'
                     alt=''
-                    width={424}
-                    height={366}
-                    />
-                </div>
-            </div>
-            <p className='w-[872px] h-[120px] mt-20 ml-[20px]'>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>
-            <p className='w-[872px] h-[120px] mt-[50px] ml-[20px]'>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>  
-            <Link href={"https://www.facebook.com/"}>
-            <Image 
-            src='/Share.png'
-            alt=''
-            width={872}
-            height={60}
-            className='mt-10 ml-[20px] mb-20'
-            /></Link>
-            
-
-            {/* Comment Section */}
-
-            {/* <div className='w-[872px] h-[472px] mt-10 ml-[20px]'>
-                <h1 className='text-2xl font-bold'>Comments - 03</h1>
-                <div className='w-[872px] h-[472px] mt-10'>
-                    <Image 
-                    src='/comment1.svg'
-                    alt=''
-                    width={872}
-                    height={112}
-                    className='cursor-pointer'
-                    />
-
-                    <Image 
-                    src='/comment2.png'
-                    alt=''
-                    width={672}
-                    height={112}
-                    className='ml-[200px] mt-5 cursor-pointer'
-                    />
- 
-                   <Image 
-                    src='/comment3.png'
-                    alt=''
-                    width={872}
-                    height={112}
-                    className='cursor-pointer mt-5'
-                    />
-                </div>
-            </div> */}
-             
-               {/* Post a comment */}
-            
-            {/* <div className='w-[872px] h-[424px] mt-5  ml-[20px]'>
-                <h1 className='text-xl border-b-[1px] h-10 border-[#E0E0E0] font-bold'>Post a Comment</h1>
-                <div className='w-[872px] mt-5 flex h-[80px]'>
-                    <input 
-                    placeholder='Name'
-                    type='name'
-                    className='w-[424px] text-lg text-[#4F4F4F] font-semibold border-[1px] px-3 border-[#E0E0E0] h-[56px]'
-                    />
-
-                   <input 
-                    placeholder='Email'
-                    type='email'
-                    className='w-[424px] text-lg text-[#4F4F4F] border-[1px] font-semibold px-3 ml-3 border-[#E0E0E0] h-[56px]'
-                    />
-                </div>
-                <input 
-                placeholder='Write a Comment'
-                type='text'
-                className='leading-[24px] text-top h-[244px] w-[872px] text-lg text-[#4F4F4F] border-[1px] font-semibold px-3 border-[#E0E0E0]'
+                    width={871}
+                    height={520}
+                    className='w-full rounded-lg'
                 />
+                <div className='flex items-center text-sm text-gray-600 mt-3 space-x-4'>
+                    <div className='flex items-center space-x-2'>
+                        <Image src='/Calendar.svg' alt='' width={24} height={24} />
+                        <p>Feb 14, 2022</p>
+                    </div>
+                    <div className='flex items-center space-x-2'>
+                        <Image src='/messages.svg' alt='' width={24} height={24} />
+                        <p>3 Comments</p>
+                    </div>
+                    <div className='flex items-center space-x-2'>
+                        <Image src='/admin.svg' alt='' width={24} height={24} />
+                        <p>Admin</p>
+                    </div>
+                </div>
+                <h1 className='font-bold text-2xl lg:text-4xl mt-6 text-[#333333]'>10 Reasons To Do A Digital Detox Challenge</h1>
+                <p className='mt-4 text-gray-700 leading-relaxed'>
+                <br/><br/>
+                At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat
+<br/><br/><br/>
+At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat
 
-                <button className='w-[212px] h-[56px] ease-in-out duration-500 bg-[#FF9F0D] hover:bg-[#ffff] hover:text-[#4F4F4F] text-white mt-10'>Post a Comment</button>
 
-            </div> */}
-            <CommentBox/>
-           
-    </div>
+                </p>
+                <div className='py-8 bg-[#FF9F0D] mt-10 text-white p-6 rounded-lg'>
+                    <div className='flex items-start'>
+                        <Image src='/Quotes.png' alt='' width={48} height={48} className='mr-4' />
+                        <p className='lg:text-2xl text-lg  font-bold'>
+                        Lorem eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet et ut aliquyam
+                        </p>
+                    </div>
+                </div>
+                <p className='mt-6 text-gray-700 leading-relaxed'>
+                    <br/>
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+                </p>
+                <div className='flex flex-col lg:flex-row mt-10 gap-6'>
+                    <div className='lg:w-1/2 text-gray-700'>
+                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>
+                        <p className='mt-5'>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing.</p>
+                    </div>
+                    <div className='lg:w-1/2'>
+                        <Image src='/ramen.png' alt='' width={424} height={366} className='w-full' />
+                    </div>
+                </div>
+                <div>
+                    <br/><br/>
+                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>
+                    
+                    <br/><br/>
+                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>
+                    </div>
+                <Link href="https://www.facebook.com/">
+                    <Image src='/Share.png' alt='' width={872} height={60} className='mt-10 w-full' />
+                </Link>
+                <CommentBox/>
+            </div>
 
-
-    <div className='w-[424px] mt-[130px] h-[2501px]'>
+            {/* Sidebar */}
+            <div className='w-[424px] lg:mt-[-35px] h-[2501px] lg:block hidden md:hidden'>
         {/* Right div */}
         <div className='flex justify-center mt-8 w-[421.82px] border-1 h-[70px]'>
 
@@ -338,11 +260,7 @@ export default function DeatilsPage() {
             </div>
   
     </div>
-</div>
-
-              
+        </div>
         </>
     )
-
-} 
-
+}
