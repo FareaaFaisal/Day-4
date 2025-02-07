@@ -68,7 +68,7 @@ export default function Home() {
           alt="sec1-image"
           height={400}
           width={400}
-          className="md:w-[100%] md:h-[100%] mt-[-50px] float-right"
+          className="md:w-[100%] md:h-[100%] mt-[-50px] float-right hidden md:hidden lg:block"
         />
       </div>
       {/* section 1 div inside image */}
