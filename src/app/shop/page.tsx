@@ -28,23 +28,32 @@ export default async function Shop() {
   return (
     <div className="w-full overflow-x-hidden">
       {/* Navbar / Hero Section */}
-      <div className="relative font-[sans-serif] pt-20 before:absolute before:w-full before:h-full before:inset-0 before:bg-black before:opacity-50 before:z-10">
-        <Image
-          src="/unsplash_4ycv3Ky1ZZU.png"
-          alt="Banner Image"
-          width={500}
-          height={500}
-          className="absolute inset-0 w-full h-full object-cover"
-        />
-        <div className="relative z-50 max-w-4xl mx-auto flex flex-col items-center justify-center text-center p-6 min-h-[350px]">
-          <h2 className="text-white text-3xl md:text-5xl font-bold mb-8">Our Shop</h2>
-          <div className="flex items-center space-x-2 text-white">
-            <Link href="/" className="text-white">Home</Link>
-            <span className="text-white"> &gt; </span>
-            <Link href="/menu" className="text-orange-500">Shop</Link>
-          </div>
-        </div>
-      </div>
+      <div className="relative font-[sans-serif] pt-20 before:absolute lg:h-full h-[300px] before:w-full before:h-full before:inset-0 bg-black before:z-[-10]">
+  {/* Banner Image */}
+  <Image
+    src="/unsplash_4ycv3Ky1ZZU.png"
+    alt="Banner Image"
+    width={500}
+    height={500}
+    className="absolute inset-0 w-full lg:h-full h-[300px] object-cover"
+  />
+
+  {/* Text Content */}
+  <div className="min-h-[350px] relative z-40 h-full max-w-4xl mx-auto flex flex-col justify-center items-center text-center p-6 lg:mt-0 mt-0">
+    <h2 className="text-white md:text-5xl text-3xl font-bold mb-8 text-center 
+      lg:absolute lg:top-1/2 lg:left-1/2 lg:-translate-x-1/2 lg:-translate-y-1/2 
+      absolute top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2 
+      z-10 lg:z-50">
+      Shop
+    </h2>
+
+    <div className="flex items-center space-x-2 lg:mt-36 mt-0 text-white">
+      <Link href="/" className="text-white">Home</Link>
+      <span className="text-white"> &gt; </span>
+      <Link href="/about" className="text-orange-500">Shop</Link>
+    </div>
+  </div>
+</div>
 
       {/* Shop Page */}
       <div className="mt-10 mb-10 mx-auto flex flex-wrap lg:flex-nowrap justify-center gap-4">
@@ -55,11 +64,11 @@ export default async function Shop() {
         </div>
 
          {/* Sidebar */}
-         <div className="mt-[170px] w-full lg:w-[25%] flex flex-col gap-8">
+         <div className="lg:mt-[170px] mt-[30px] w-full lg:w-[25%] flex flex-col gap-8">
          
 
           {/* Recent Posts */}
-          <div className="border p-4 mt-14">
+          <div className="border p-4 lg:mt-14 md:mt-0">
             <h1 className="font-bold mb-4">Recent Posts</h1>
             {["Recent post.png", "Recent post (1).png", "Recent post (2).png", "Recent post (3).png"].map((post, index) => (
               <Image
@@ -74,7 +83,7 @@ export default async function Shop() {
           </div>
 
           {/* Filter By Menu */}
-          <div className="border p-4">
+          <div className="border p-4 hidden md:hidden lg:block">
             <h1 className="font-bold mb-4">Filter By Menu</h1>
             {["Chicken Fry.png", "Chicken Fry (1).png", "Chicken Fry (2).png", "Chicken Fry (3).png", "Chicken Fry (4).png"].map((menu, index) => (
               <Image
